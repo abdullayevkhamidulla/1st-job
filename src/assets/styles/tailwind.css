@@ -1,0 +1,97 @@
+
+@tailwind components;
+@tailwind utilities;
+@tailwind base;
+
+/*stylelint-disable*/
+body {
+  width: 100%;
+}
+
+.ant-select-selector {
+  border: none !important;
+  border-color: none !important;
+}
+.ant-select-selector:focus {
+  border: none !important;
+}
+
+.link {
+  @apply w-[100px] !border-none font-bold;
+}
+.hamburger_btn {
+  @apply grid h-[35px] w-[35px] cursor-pointer place-items-center rounded-[5px] border-[1px] border-[#E9E9E9];
+}
+
+.nav {
+  width: 100%;
+  box-shadow: 0px 0px 8px 0px #33333333;
+}
+.main-container-bg {
+  background: rgb(173, 209, 157);
+  background: linear-gradient(90deg, rgba(173, 209, 157, 1) 0%, rgba(45, 98, 74, 1) 53%, rgba(40, 90, 67, 1) 100%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  padding-left: 50px;
+  padding-top: 40px;
+  gap: 20px;
+  padding-bottom: 40px;
+}
+.element::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+.btn {
+  border: 2px solid #285a43;
+  color: white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: black;
+  background-color: white;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  color: white;
+  background-color: #285a43;
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    border-color 0.3s;
+}
+#hello{
+  background-image: url(../../../public/img7.jpg);
+}
+
+#hello1{
+  background-image: url(../../../public/img9.jpg);
+}
+
+#hello2{
+  background-image: url(../../../public/img8.png);
+}
+
+#box{
+  background-image: url(../../../public/home1.jpg);
+} 
+#box1{
+  background-image: url(../../../public/hom2.jpg);
+} 
+#box2{
+  background-image: url(../../../public/hom6.jpg);
+} 
+#box3{
+  background-image: url(../../../public/hom7.jpg);
+} 
+#box4{
+  background-image: url(../../../public/hom5.jpg);
+} 
+#box5{
+  background-image: url(../../../public/hom4.jpg);
+} 
+#box6{
+  background-image: url(../../../public/hom3.jpg);
+} 
