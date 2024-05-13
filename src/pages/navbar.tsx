@@ -23,7 +23,7 @@ const Navbar:React.FC = () => {
   };
 
   return (
-    <div className='w-[100%] h-[auto]  bg-[#ffffff]  box-border'>
+    <div className='w-[100%] h-[auto]  bg-[#ffffff]  box-border '>
     <div className='w-100px h-[40px] flex pt-1 pb-1 text-[14px] justify-around bg-[#ffffff] border-[1px] border-black'>
         <div className='flex gap-4 items-center '>
           <div className='flex gap-3 items-center'>
@@ -55,12 +55,12 @@ const Navbar:React.FC = () => {
       <Spin spinning={spinning} fullscreen />
       </Link>
       
-      <div className='ms-9'>
+      <div className='ms-9 z-auto'>
       <ul className="nav-list flex text-[#fff] font-inter items-center gap-4 ">
                 <Link to={'/Metro-Xaritasi'}>
                   <button>Metro Xaritasi</button>
                 </Link>
-                <div className="group inline-block text-[15px] relative">
+                <div className="group inline-block text-[15px] relative z-0">
                   <button className="text-white bg-[#2a9b9f] px-4 py-2 rounded-lg hover:bg-blue-600">To'lovlar</button>
                   <div className="hidden group-hover:block absolute bg-[#2a9b9f] shadow-md py-2 rounded-lg mt-2">
                     <Link to={'/TOLOV-TURLARI'}>
@@ -97,7 +97,7 @@ const Navbar:React.FC = () => {
                     <Link to={'/Yangiliklar'}>
                       <button className="block px-4 text-[16px] py-2 bg-[#2a9b9f] hover:bg-blue-600 w-full">Yangiliklar</button>
                     </Link>
-                    <Link to={'/Elonlar va Tadbirlar'}>
+                    <Link to={'/Elonlar-va-Tadbirlar'}>
                       <button className="block px-4 text-[16px] py-2 bg-[#2a9b9f] hover:bg-blue-600 w-full">Elonlar</button>
                     </Link>
                     <Link to={'/Ommaviy-Tadbirlar'}>
@@ -108,23 +108,23 @@ const Navbar:React.FC = () => {
                     </Link>
                   </div>
                 </div>
-                <Link to={'/pickup'}>
-                  <button className='text-[15px]'>Hamkorlik</button>
-                </Link>
+                
+                <button className='text-[15px]'>Hamkorlik</button>
+                
                 <div className="group inline-block text-[15px] relative">
                   <button className="text-white bg-[#2a9b9f] px-4 py-2 rounded-lg hover:bg-blue-600">Metro Haqida</button>
                   <div className="hidden group-hover:block absolute bg-[#2a9b9f] shadow-md py-2 rounded-lg mt-2 ">
-                    <Link to={'/Murojatlar'}>
+                    <Link to={'/Metro-tarixi'}>
                       <button className="block px-4 text-[16px] py-2 bg-[#2a9b9f] hover:bg-blue-600 w-full">Metropoliten Tarixi</button>
                     </Link>
-                    <Link to={'/Foydalanish-qoydalari'}>
-                      <button className="block px-4 text-[16px] py-2 bg-[#2a9b9f] hover:bg-blue-600">Rahbariyat</button>
+                    <Link to={'/Tarkibiy-bolinmalar'}>
+                      <button className="block px-4 text-[16px] py-2 bg-[#2a9b9f] hover:bg-blue-600">Tarkibiy Bo'linmalar</button>
                     </Link>
-                    <Link to={'/savollar'}>
-                      <button className="block px-4 text-[16px] py-2 bg-[#2a9b9f] hover:bg-blue-600 w-full">Tarkibiy Bo'linmalar</button>
+                    <Link to={"Ish-o'rinlari"}>
+                      <button className="block px-4 text-[16px] py-2 bg-[#2a9b9f] hover:bg-blue-600 w-full">Bo'sh ish o'rni</button>
                     </Link>
-                    <Link to={'/Davlat-ramzlari'}>
-                      <button className="block px-4 text-[16px] py-2 bg-[#2a9b9f] hover:bg-blue-600">Bo'sh ish o'rni</button>
+                    <Link to={'/Oylik-hisobot'}>
+                      <button className="block px-4 text-[16px] py-2 bg-[#2a9b9f] hover:bg-blue-600">Oylik-hisobotlar</button>
                     </Link>
                   </div>
                 </div>

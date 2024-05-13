@@ -20,7 +20,10 @@ import Tadbir from 'pages/pressa/tadbir';
 import Ducc from 'pages/newws/ducc';
 import Grant from 'pages/newws/grant';
 import Tech from 'pages/newws/tech';
-
+import Tarix from 'pages/about/tarix';
+import Tarkib from 'pages/about/tarkib';
+import Ish from 'pages/about/ish';
+import Hisobot from 'pages/about/hisobot';
 
 
 const Routes: React.FC = () => (
@@ -39,12 +42,16 @@ const Routes: React.FC = () => (
       <Route path="/savollar" element={<Sovol/>} />
       <Route path="/Davlat-ramzlari" element={<Ramzlar />} />
       <Route path="/Yangiliklar" element={<News />} />
-      <Route path="/Elonlar va Tadbirlar" element={<Elon />} />
+      <Route path="/Elonlar-va-Tadbirlar" element={<Elon />} />
       <Route path="/Ommaviy-Tadbirlar" element={<Tadbir/>} />
       <Route path="/Fotogalareya" element={<Fotogalareya />} />
       <Route path="/Yangiliklar/Duc" element={<Ducc />} />
       <Route path="/Yangiliklar/Grant" element={<Grant />} />
       <Route path="/Yangiliklar/Texnalogiya" element={<Tech />} />
+      <Route path="/Metro-tarixi" element={<Tarix />} />
+      <Route path="/Tarkibiy-bolinmalar" element={<Tarkib />} />
+      <Route path="Ish-o'rinlari" element={<Ish />} />
+      <Route path="/Oylik-hisobot" element={<Hisobot />} />
     
   </Switch>
   
