@@ -1,21 +1,23 @@
 /* eslint-disable */
 import { NavLink, Link } from 'react-router-dom';
+import ThemeToggle from '../components/ThemeToggle';
 
 
 const Home= () =>{
     
     return (
-      <div className="h-auto">
-          <img src="Mask.png" alt="" />
-          <div className="text-center flex gap-9 flex-col pt-10 mt-[100px]">
+      <div className="h-auto dark:bg-[#002D40] ">
+          <img src="Mask.png" alt="" className='w-[100%]'/>
+          
+          <div className="text-center dark:bg-[#002D40]  flex gap-9 flex-col pt-10  ">
             <div className='flex text-center justify-center'>
               <div className="w-[1170px]  p-10 flex justify-center flex-col">
-                  <p className="text-[20px]">So'ngi</p>
-                  <h1 className="text-[26px] text-[#5a5aff] font-medium">YANGILIKLAR</h1>
+                  <p className="text-[20px] dark:text-white">So'ngi</p>
+                  <h1 className="text-[26px] dark:text-white text-[#5a5aff] font-medium">YANGILIKLAR</h1>
                   <hr />
                 </div>
             </div>
-            <div className="flex justify-between w-[1200px] ms-auto   min-h-[400px] py-10 min-w-[374px]">
+            <div className="flex justify-center w-[100%] gap-[50px]  min-h-[400px] py-10 min-w-[374px]">
               <div id="hello" className="flex p-5 flex-col items-center justify-evenly w-[374px] h-[300px] transition duration-700 ease-in-out text-white group hover:-translate-y-5 rounded-3xl bg-cover">
                   <h1 className="text-[20px] group hidden group-hover:inline group-hover:transition duration-700">“Toshkent metropoliteni” DUK da “Diniy ekstremizm va fundamentalizmga qarshi kurash” mavzusida davra suhbati tashkillashtirildi</h1>
                   <Link to={'/Yangiliklar/Duc'}>
@@ -40,10 +42,10 @@ const Home= () =>{
             
           </div>
 
-          <div className="flex flex-col gap-[20px] h-[900px] text-center items-center mt-[100px] perspective-800">
+          <div className="flex flex-col gap-[20px] h-[900px] text-center items-center mt-[100px] perspective-800 dark:bg-[#002D40] ">
               <div className="w-[1170px] text-center p-10 flex justify-center flex-col">
-                <p className="text-[20px]">Tez-tez beriladigan</p>
-                <h1 className="text-[26px] text-[#5a5aff] font-medium">MALUMOTLAR</h1>
+                <p className="text-[20px] dark:text-white">Tez-tez beriladigan</p>
+                <h1 className="text-[26px] dark:text-white text-[#5a5aff] font-medium">MALUMOTLAR</h1>
                 <hr />
               </div>
             <div className="flex justify-center h-[257px] perspective-800">
@@ -53,7 +55,7 @@ const Home= () =>{
                     <button className="text-[white] text-[25px] p-3 rounded-2xl">Metro-Sxemasi</button>
                     </div>    
                 </div>
-                <div  className="w-[1170px] bg-[#262525] flex items-center justify-center absolute h-[257px] bg-cover [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                <div  className="w-[1170px] bg-[#ffffff] flex items-center justify-center absolute h-[257px] bg-cover [transform:rotateY(180deg)] [backface-visibility:hidden]">
                   <a href='https://tashmetro.uz/wp-content/uploads/2023/12/Metro-xaritasi-scaled.jpg' className="text-[white] bg-[blue] p-3 rounded-2xl"> Metro-Sxemasi</a>
                 </div>
               </div>
@@ -66,7 +68,7 @@ const Home= () =>{
                     <button className="text-[white] text-[25px] p-3 rounded-2xl">Qanday To'lanadi</button>
                     </div>    
                 </div>
-                <div  className="w-[560px] bg-[#262525] flex items-center justify-center absolute h-[257px] bg-cover [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                <div  className="w-[560px] bg-[#fffbfb] flex items-center justify-center absolute h-[257px] bg-cover [transform:rotateY(180deg)] [backface-visibility:hidden]">
                 <Link to={"/TOLOV-TURLARI"}>
                 <button className="text-[white] bg-[blue] p-3 rounded-2xl">Qanday To'lanadi</button>
                 </Link>
@@ -143,21 +145,21 @@ const Home= () =>{
    
           </div>
 
-          <div className="flex items-center flex-col gap-[20px] h-[700px] box-border  mt-[200px]">
+          <div className="flex items-center flex-col gap-[20px] h-[800px] box-border  pb-[100px] dark:bg-[#002D40]  dark:text-white   mt-[200px]">
             <div className="flex flex-col h-auto w-[1170px] gap-3 items-end">
               <div className="w-[930px] p-10">
-                <p className="text-[20px]">Tez-tez beriladigan</p>
-                <h1 className="text-[26px] text-[#5a5aff] font-medium">SAVOLLAR</h1>
+                <p className="text-[20px] dark:text-white">Tez-tez beriladigan</p>
+                <h1 className="text-[26px] dark:text-white text-[#5a5aff] font-medium">SAVOLLAR</h1>
                 <hr />
               </div>
-              <div className="w-[930px] px-16 py-7 leading-7  h-[260px] bg-[#efefef]">
-                <h1 className="text-[25px]">ATTO kartasini qaerdan sotib olish mumkin va karta balansini qanday to‘ldirish mumkin?</h1>
+              <div className="w-[930px] rounded-3xl px-16 py-7 leading-7  h-[260px] bg-[#efefef]">
+                <h1 className="text-[25px] dark:text-black">ATTO kartasini qaerdan sotib olish mumkin va karta balansini qanday to‘ldirish mumkin?</h1>
                 <p className="mt-6 leading-8 text-[gray]">"ATTO" transport kartasining balansini ATTO, MyUzcard , Payme, Upay, Apelsin va boshqa elektron to‘lov tizimlarining mobil ilovalari orqali to‘ldirish mumkin.
                 O‘z-o‘ziga xizmat ko‘rsatish terminallarida-infokiosklar.
                 "Toshyulovchitrans" DUK va "Toshkent metropoliteni" DUK kompaniyasining barcha savdo nuqtalarida.</p>
               </div>
-              <div className="w-[930px] px-16 py-7 leading-7 h-[260px] bg-[#efefef]">
-                <h1 className="text-[25px]">Karta ishi bo'yicha qayerga murojaat qilishim mumkin?</h1>
+              <div className="w-[930px] rounded-3xl px-16 py-7 leading-7 h-[260px]  bg-[#efefef]">
+                <h1 className="text-[25px] dark:text-black">Karta ishi bo'yicha qayerga murojaat qilishim mumkin?</h1>
                 <p className="mt-6 text-[gray]">+998 78 140 08 08 raqamiga qo'ng'roq qilish yoki elektron pochta orqali info@atto.uz</p>
               </div>
               
