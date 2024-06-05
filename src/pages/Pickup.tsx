@@ -14,7 +14,7 @@ import { Button, Form, Input, message } from 'antd';
 <FaTelegram/> */}
 const Pickup: React.FC = () => {
     return(
-        <div id='contact'  className='h-auto  mt-[100px]  w-[100%] flex-col flex items-center bg-fixed	bg-cover bg-no-repeat bg-center'>
+        <div id='contact'  className='h-auto  pt-[100px]  w-[100%] flex-col flex items-center bg-fixed	bg-cover bg-no-repeat bg-center dark:bg-[#002D40]'>
             <div className='w-[80%] h-auto text-center mt-[100px] mb-[100px]'>
                 <h1 className='text-[50px] text-[white] font-medium mb-[50px]'>Get in Touch</h1>
                 <hr />
@@ -28,14 +28,14 @@ const Pickup: React.FC = () => {
                         </div>
                    </div>
                    <div className='w-[350px] h-auto text-[white] flex items-center gap-5 text-start'>
-                        <a href=""><FaAt className='w-[40px] h-[40px] hover:text-[#6161ff]'/> </a>
+                        <a href="mailto:abdullayevhamidullo76@gmail.com"><FaAt className='w-[40px] h-[40px] hover:text-[#6161ff]'/> </a>
                         <div>
                             <h1 className='text-[25px]'>Elektron pochta manzili</h1>
                             <p className='text-[16px] mt-2'> <a href="tel:+998 99 348 51 79">abdullayevhamidullo76@gmail.com</a> </p>
                         </div>
                    </div>
                    <div className='w-[350px] h-auto text-[white] flex items-center gap-5 text-start'>
-                        <FaGithub className='w-[40px] h-[40px] hover:text-[#6161ff]'/> 
+                        <a href='https://github.com/abdullayevkhamidulla'><FaGithub className='w-[40px] h-[40px] hover:text-[#6161ff]'/> </a>
                         <div>
                             <h1 className='text-[25px]'>Github</h1>
                             <p className='text-[16px] mt-2'>Murojaatlar uchun <a href="tel:+998 99 348 51 79">+998 (71)-245-56-03</a> </p>
@@ -45,7 +45,7 @@ const Pickup: React.FC = () => {
                 <hr />
                 <div className=' h-auto mt-[100px] flex justify-around'>
                    <div className='w-[350px] h-auto text-[white] flex items-center gap-5 text-start'>
-                        <FaFacebookF className='w-[50px] h-[50px] hover:text-[#6161ff]'/> 
+                        <a href='https://www.facebook.com/hamidullo.abdullayev.334/?locale=ru_RU'><FaFacebookF className='w-[50px] h-[50px] hover:text-[#6161ff]'/> </a>
                         <div>                       
                             <p className='text-[25px] mt-2'> <a href="tel:+998 99 348 51 79">Facebook</a> </p>
                         </div>
@@ -58,7 +58,7 @@ const Pickup: React.FC = () => {
                         </div>
                    </div>
                    <div className='w-[350px] h-auto text-[white] flex items-center gap-5 text-start'>
-                        <FaTelegram className='w-[50px] h-[50px] hover:text-[#6161ff]'/> 
+                        <a href='https://t.me/https://t.me/Coderr_77'><FaTelegram className='w-[50px] h-[50px] hover:text-[#6161ff]'/> </a>
                         <div>
                             
                             <p className='text-[25px] mt-2'><a href="tel:+998 99 348 51 79">Telegram</a> </p>

@@ -10,9 +10,9 @@ const Map: React.FC = () => {
   
 
   return (
-    <div className=" box-border h-auto w-[100%] flex justify-center bg-[#002D40]  ">
+    <div className=" box-border h-auto w-[100%] flex justify-center dark:bg-[#002D40]  ">
       <div className="flex w-[80%]  p-10  justify-around  mt-[100px]">
-        <div className="w-[300px] h-auto gap-14 bg-white flex flex-col ">
+        <div className="w-[300px] h-auto gap-14  flex flex-col ">
           <div className="w-[300px] h-[100px] text-center bg-gray-50">
               <h1 className="text-[30px] text-[#315fc3] font-medium">Toshkent</h1>
               <div className="flex items-center  justify-center gap-2 bg-gray-50 border-white">

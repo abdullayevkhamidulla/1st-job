@@ -55,7 +55,7 @@ function fotogalareya() {
   };
 
   return (
-    <div className='w-[100%] h-auto mt-[300px] flex flex-col items-center '>
+    <div className='w-[100%] h-auto pt-[300px] pb-10 flex flex-col items-center dark:bg-[#002D40]'>
       <div className='w-[100%] h-auto]'>
       <Slider {...settings}>
         {dataDigitalBestSeller.map((item) => (

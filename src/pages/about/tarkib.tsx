@@ -4,9 +4,9 @@ import Search from 'antd/es/input/Search';
 
 const Tarkib = () => {
   return (
-    <div className='w-[100%] h-auto mt-[200px] flex justify-center'>
+    <div className='w-[100%] h-auto pt-[200px] pb-10 flex justify-center dark:bg-[#002D40]'>
     <div className='w-[80%] h-auto flex justify-evenly'>
-    <div className="w-[300px] h-auto gap-14 bg-white flex flex-col ">
+    <div className="w-[300px] h-auto gap-14  flex flex-col ">
           <div className="w-[300px] h-[100px] text-center bg-gray-50">
               <h1 className="text-[30px] text-[#315fc3] font-medium">Toshkent</h1>
               <div className="flex items-center  justify-center gap-2 bg-gray-50 border-white">

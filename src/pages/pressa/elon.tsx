@@ -38,9 +38,9 @@ const Elon: React.FC = () =>  {
     const currentPageItems = items.slice(startIndex, endIndex);
 
     return (
-        <div className='w-[100%] h-auto mt-[200px] flex justify-center'>
+        <div className='w-[100%] h-auto pt-[200px] flex justify-center dark:bg-[#002D40]'>
             <div className='w-[80%] h-auto gap-4 flex justify-evenly'>
-                <div className="w-[300px] h-auto gap-14 bg-white flex flex-col ">
+                <div className="w-[300px] h-auto gap-14  flex flex-col ">
                     <div className="w-[300px] h-[100px] text-center bg-gray-50">
                         <h1 className="text-[30px] text-[#315fc3] font-medium">Toshkent</h1>
                         <div className="flex items-center  justify-center gap-1 bg-gray-50 border-white">
@@ -57,9 +57,9 @@ const Elon: React.FC = () =>  {
                         <div key={item.id} className="mb-4 gap-2  w-[270px] border rounded-lg">
                             <img src={item.imageUrl} alt={item.title} className="mb-2 rounded-lg" />
                             <div className='p-2 flex flex-col gap-4'>
-                                <h1 className="text-[14px] text-[gray]">{item.title}</h1>
-                                <p className="text-gray-600 text-[17px] hover:text-[#000000]">{item.description}</p>
-                                <p className=" text-[14px] text-[gray]">{item.title2}</p>
+                                <h1 className="text-[14px] text-[gray] dark:text-[#bdbdbd]">{item.title}</h1>
+                                <p className="text-gray-600 text-[17px] dark:text-white hover:text-[#000000]">{item.description}</p>
+                                <p className=" text-[14px] text-[gray] dark:text-[#bdbdbd]">{item.title2}</p>
                             </div>
                         </div>
                     ))}

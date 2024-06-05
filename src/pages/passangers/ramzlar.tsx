@@ -8,11 +8,11 @@ import madhi from './madhi.png'
 
 const Ramzlar = () => {
   return (
-    <div className='w-[100%] h-auto mt-[200px] flex justify-center'>
+    <div className='w-[100%] h-auto pt-[200px] flex justify-center dark:bg-[#002D40] dark:text-white'>
     <div className='w-[70%] h-auto flex flex-col pb-[100px]'>
       <div className='flex flex-col gap-10 mb-10'>
         <div>
-          <p className='text-[gray] mb-1'>O'ZBEKISTON RESPUBLIKASI DAVLAT</p>
+          <p className=' mb-1'>O'ZBEKISTON RESPUBLIKASI DAVLAT</p>
           <div className='w-[100px] h-[3px] bg-gray-600'></div>
           <h1 className='text-[35px] text-[#315fc3] font-bold'>GERBI</h1>
         </div>
@@ -42,7 +42,7 @@ const Ramzlar = () => {
       <hr  className='border-[1px] border-[#685f5f]'/>
       <div className='flex flex-col gap-10 mt-10  mb-10'>
         <div>
-          <p className='text-[gray] mb-1'>O'ZBEKISTON RESPUBLIKASI DAVLAT</p>
+          <p className='mb-1'>O'ZBEKISTON RESPUBLIKASI DAVLAT</p>
           <div className='w-[100px] h-[3px] bg-gray-600'></div>
           <h1 className='text-[35px] text-[#315fc3] font-bold'>BАYROG’I</h1>
         </div>
@@ -84,7 +84,7 @@ const Ramzlar = () => {
       <div className='flex flex-col gap-10 mt-10'>
        
         <div>
-          <p className='text-[gray] mb-1'>O'ZBEKISTON RESPUBLIKASI DAVLAT</p>
+          <p className=' mb-1'>O'ZBEKISTON RESPUBLIKASI DAVLAT</p>
           <div className='w-[100px] h-[3px] bg-gray-600'></div>
           <h1 className='text-[35px] text-[#315fc3] font-bold'>GERBI</h1>
         </div>
@@ -98,7 +98,7 @@ const Ramzlar = () => {
           <p>
           O`zbekiston Respublikаsining Dаvlаt mаdhiyasigа zo`r ehtirom bilаn qаrаsh O`zbekiston Respublikаsi hаr bir fuqаrosining vаtаnpаrvаrlik burchidir.
           </p>
-          <p className='text-[gray] text-[15px]'>
+          <p className=' text-[15px]'>
           Mutal Burhonov musiqasi <br />
           Abdulla Oripov so’zi
           </p>
@@ -107,7 +107,7 @@ const Ramzlar = () => {
         <img  src={madhi} alt="" />
         </div>
         <div className='flex  gap-5  justify-center text-[15px] mt-8'>
-          <div className=' w-[270px] text-center flex flex-col gap-4 text-[gray]'>
+          <div className=' w-[270px] text-center flex flex-col gap-4 '>
           <p>
             Serquyosh hur o’lkam, elga baxt, najot,
             Sen o’zing do’stlarga yo’ldosh, mehribon!

@@ -1,6 +1,7 @@
 // src/components/ThemeToggle.js
 import React, { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
+import { FaSun, FaMoon } from 'react-icons/fa';
 
 const ThemeToggle = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -10,7 +11,11 @@ const ThemeToggle = () => {
       onClick={toggleTheme}
       className="p-2 bg-gray-200 dark:bg-gray-800 rounded"
     >
-      {theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
+      {theme === 'light' ? (
+        <FaMoon />
+      ) : (
+        <FaSun />
+      )}
     </button>
   );
 };

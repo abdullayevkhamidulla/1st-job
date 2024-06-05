@@ -15,7 +15,7 @@ const { Search } = Input;
 
 const Pay = () =>{
     
-  return <div className=" box-border h-auto w-[100%] flex justify-center mt-[150px] dark:bg-[#002D40] bg-[#ffffff]">
+  return <div className=" box-border h-auto w-[100%] flex justify-center pt-[150px] dark:bg-[#002D40] bg-[#ffffff]">
     <div className=" w-[90%] flex flex-col gap-[150px] h-auto ">
         <div className="text-center  pb-10">
           <h1 className="text-[40px] font-bold m-0 p-0 text-[#ffffff]">ATTO</h1>
