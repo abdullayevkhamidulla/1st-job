@@ -65,8 +65,8 @@ const Navbar:React.FC = () => {
       <div className='lg:hidden' onClick={toggleMenu}>
         {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
       </div>
-      <div className={`ms-9 z-auto ${isOpen ? 'block' : 'hidden'} lg:flex`}>
-        <ul className="nav-list flex flex-col lg:flex-row text-[#fff] font-inter items-center gap-4">
+      <div className={`ms-9 z-auto ${isOpen ? 'block' : 'hidden'} lg:flex `}>
+        <ul className={`nav-list flex flex-col lg:flex-row ${isOpen ? 'bg-blue-500' : ''} text-[#fff] font-inter items-center gap-4 z-0`}>
           <Link to={'/Metro-Xaritasi'}>
             <button>Metro Xaritasi</button>
           </Link>
@@ -118,7 +118,9 @@ const Navbar:React.FC = () => {
               </Link>
             </div>
           </div>
-          <button className='text-[15px]'>Hamkorlik</button>
+          <Link to={'/Pays'}>
+                <button className="text-white px-4 py-2 rounded-lg hover:bg-blue-600">Pays</button>
+            </Link>
           <div className="group inline-block text-[15px] relative">
             <button className="text-white px-4 py-2 rounded-lg hover:bg-blue-600">Metro Haqida</button>
             <div className="hidden group-hover:block absolute bg-[#2a9b9f] shadow-md py-2 rounded-lg mt-2">

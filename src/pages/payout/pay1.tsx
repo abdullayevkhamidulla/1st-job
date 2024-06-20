@@ -9,7 +9,7 @@ import img2 from './imgs/OQUVCHI.png'
 import img3 from './imgs/TALABA.png'
 import img4 from './imgs/YAGONA.png'
 import img5 from './imgs/ticcet.png'
-import img6 from './imgs/card.png'
+import img6 from './imgs/cards.png'
 
 const { Search } = Input;
 

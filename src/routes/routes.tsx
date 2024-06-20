@@ -24,6 +24,7 @@ import Tarix from 'pages/about/tarix';
 import Tarkib from 'pages/about/tarkib';
 import Ish from 'pages/about/ish';
 import Hisobot from 'pages/about/hisobot';
+import Pays from 'pages/payout/pays';
 
 
 const Routes: React.FC = () => (
@@ -52,6 +53,7 @@ const Routes: React.FC = () => (
       <Route path="/Tarkibiy-bolinmalar" element={<Tarkib />} />
       <Route path="Ish-o'rinlari" element={<Ish />} />
       <Route path="/Oylik-hisobot" element={<Hisobot />} />
+      <Route path="/Pays" element={<Pays />} />
     
   </Switch>
   

@@ -41,7 +41,7 @@ const footer = () => {
             <div className="mb-4 md:mb-0">
                 <h2 className="text-[22px] font-semibold text-pink-500 py-2 uppercase">Contact</h2>
                 <p className="text-[16px] my-4">Email: youremail.gmail.com</p>
-                <p className="text-[16px] my-4">Phone: +1 113-456-7890 </p>
+                <p className="text-[16px] my-4">Phone: +998 99 348 51 79 </p>
                 <div className="flex space-x-4">
                     <a
                         className=" text-pink-500 transform hover:scale-150 
