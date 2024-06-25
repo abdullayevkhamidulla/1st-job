@@ -2,6 +2,7 @@ import React from "react";
 import Calendar from '../components/calendar';
 import { AiOutlineCloud } from "react-icons/ai";
 import { Input, Space } from 'antd';
+import maps from '../assets/imgs/metromap.jpg';
 
 const { Search } = Input;
 
@@ -23,7 +24,7 @@ const Map: React.FC = () => {
           <Search placeholder="input search text" className="w-[300px]" />
           <Calendar/>
         </div>
-          <img src="https://tashmetro.uz/wp-content/uploads/2023/10/toshkent-subway-mine-UZB2-with-QR-%D0%B1%D0%B5%D0%B7-%D1%80%D0%B5%D0%BA%D0%B8-%E2%80%94-RU-1.svg" alt="" />
+          <img src={maps} alt="" />
       </div>
 
     </div>

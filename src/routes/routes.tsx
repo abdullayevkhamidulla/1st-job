@@ -25,6 +25,10 @@ import Tarkib from 'pages/about/tarkib';
 import Ish from 'pages/about/ish';
 import Hisobot from 'pages/about/hisobot';
 import Pays from 'pages/payout/pays';
+import Regis from 'modules/auth/register';
+import Login from 'modules/auth/login';
+import MyComponent from 'pages/apply';
+import Admin1 from 'pages/admin/admin';
 
 
 const Routes: React.FC = () => (
@@ -54,7 +58,13 @@ const Routes: React.FC = () => (
       <Route path="Ish-o'rinlari" element={<Ish />} />
       <Route path="/Oylik-hisobot" element={<Hisobot />} />
       <Route path="/Pays" element={<Pays />} />
-    
+      <Route path="/Apply" element={<MyComponent />} />
+      <Route path="/Admin" element={<Admin1 />} />
+
+    <Route path='Auth'>
+        <Route path='/Auth/Register' element={<Regis/>}/>
+        <Route path='/Auth/Login' element={<Login/>}/>
+    </Route>
   </Switch>
   
 );

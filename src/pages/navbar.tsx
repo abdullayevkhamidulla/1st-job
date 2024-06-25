@@ -51,13 +51,16 @@ const Navbar:React.FC = () => {
         </div>
         <div className='flex items-center  gap-3'>
             <p>Yordam</p>
+            <Link to={'/Auth/Login'}>
             <p>Kirish</p>
+            </Link>
+            
             <ThemeToggle/>
         </div>
         
        
     </div>
-    <div className='flex px-2 z-0 bg-[#16a39c] dark:bg-[#002D40] absolute top-16 text-[16px] border-[white] border-[1px] text-[white] rounded-[28px] w-full lg:w-[70%] h-[50px] items-center justify-between'>
+    <div className='flex px-2  bg-[#16a39c] dark:bg-[#002D40] absolute top-16 text-[16px] border-[white] border-[1px] text-[white] rounded-[28px] w-full lg:w-[70%] h-[50px] items-center justify-between'>
       <Link to={'/home'}>
         <img onClick={showLoader} src={svg1} alt='logo' className='w-[30px] h-[30px] ms-5' />
         <Spin spinning={spinning} fullscreen />
@@ -65,14 +68,14 @@ const Navbar:React.FC = () => {
       <div className='lg:hidden' onClick={toggleMenu}>
         {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
       </div>
-      <div className={`ms-9 z-auto ${isOpen ? 'block' : 'hidden'} lg:flex `}>
+      <div className={`ms-9 z-10 ${isOpen ? 'block' : 'hidden'} lg:flex `}>
         <ul className={`nav-list flex flex-col lg:flex-row ${isOpen ? 'bg-blue-500' : ''} text-[#fff] font-inter items-center gap-4 z-0`}>
           <Link to={'/Metro-Xaritasi'}>
             <button>Metro Xaritasi</button>
           </Link>
           <div className="group inline-block text-[15px] relative z-0">
             <button className="text-white px-4 py-2 rounded-lg hover:bg-blue-600">To'lovlar</button>
-            <div className="hidden group-hover:block absolute bg-[#2a9b9f] shadow-md py-2 rounded-lg mt-2">
+            <div className="hidden group-hover:block absolute bg-[#2a9b9f] shadow-md  rounded-lg ">
               <Link to={'/TOLOV-TURLARI'}>
                 <button className="block px-4 text-[16px] py-2 bg-[#2a9b9f] hover:bg-blue-600 w-full">To'lov-turlari</button>
               </Link>
@@ -84,11 +87,11 @@ const Navbar:React.FC = () => {
               </Link>
             </div>
           </div>
-          <div className="group inline-block text-[15px] relative">
+          <div className="group inline-block text-[15px] relative z-2">
             <button className="text-white px-4 py-2 rounded-lg hover:bg-blue-600">Yo'lovchilar</button>
-            <div className="hidden group-hover:block absolute bg-[#2a9b9f] shadow-md py-2 rounded-lg mt-2">
+            <div className="hidden group-hover:block absolute bg-[#2a9b9f] shadow-md rounded-lg  z-2">
               <Link to={'/Murojatlar'}>
-                <button className="block px-4 text-[16px] py-2 bg-[#2a9b9f] hover:bg-blue-600 w-full">Murojatlar</button>
+                <button className="block px-4 text-[16px] py-2 bg-[#2a9b9f] hover:bg-blue-600 w-full ">Murojatlar</button>
               </Link>
               <Link to={'/Foydalanish-qoydalari'}>
                 <button className="block px-4 text-[16px] py-2 bg-[#2a9b9f] hover:bg-blue-600">Foydalanish qoydalari</button>
@@ -103,7 +106,7 @@ const Navbar:React.FC = () => {
           </div>
           <div className="group inline-block text-[15px] relative">
             <button className="text-white px-4 py-2 rounded-lg hover:bg-blue-600">Pressa</button>
-            <div className="hidden group-hover:block absolute bg-[#2a9b9f] shadow-md py-2 rounded-lg mt-2">
+            <div className="hidden group-hover:block absolute bg-[#2a9b9f] shadow-md rounded-lg ">
               <Link to={'/Yangiliklar'}>
                 <button className="block px-4 text-[16px] py-2 bg-[#2a9b9f] hover:bg-blue-600 w-full">Yangiliklar</button>
               </Link>

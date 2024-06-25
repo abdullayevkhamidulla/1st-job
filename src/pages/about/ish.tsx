@@ -1,6 +1,8 @@
 import React from 'react'
 import Calendar from '../../components/calendar';
 import Search from 'antd/es/input/Search';
+import { Button } from 'antd';
+import { Link } from 'react-router-dom';
 
 const Ish = () => {
   return (
@@ -27,7 +29,9 @@ const Ish = () => {
           mashinistlarga ish kunida tekin nonushta va tushlik beriladi;<br />
           doimiy ravishda tibbiy ko‘rikdan o‘tib borishi ta’minlanadi;<br />
           oylik maoshi shtat jadvaliga asosan belgilanadi;</p>
-          
+          <Link to={'/Apply'}>
+          <button className='bg-[#546bff] text-white py-[6px] px-6 rounded-md mt-2'>Apply</button>
+          </Link>
         </div>
       </div>
       <hr />
@@ -47,6 +51,9 @@ const Ish = () => {
           noqulay ish sharoitlari uchun qo‘shimcha mehnat ta’tili;<br />,<br />
           oylik maoshi shtat jadvaliga asosan belgilanadi;<br />
           </p>
+          <Link to={'/Apply'}>
+          <button className='bg-[#546bff] text-white py-[6px] px-6 rounded-md mt-2'>Apply</button>
+          </Link>
           
         </div>
       </div>
@@ -67,6 +74,9 @@ const Ish = () => {
           noqulay ish sharoitlari uchun qo‘shimcha mehnat ta’tili;<br />,<br />
           oylik maoshi shtat jadvaliga asosan belgilanadi;<br />
           </p>
+          <Link to={'/Apply'}>
+          <button className='bg-[#546bff] text-white py-[6px] px-6 rounded-md mt-2'>Apply</button>
+          </Link>
           
         </div>
       </div>
@@ -87,6 +97,9 @@ const Ish = () => {
           noqulay ish sharoitlari uchun qo‘shimcha mehnat ta’tili;<br />,<br />
           oylik maoshi shtat jadvaliga asosan belgilanadi;<br />
           </p>
+          <Link to={'/Apply'}>
+          <button className='bg-[#546bff] text-white py-[6px] px-6 rounded-md mt-2'>Apply</button>
+          </Link>
           
         </div>
       </div>
@@ -109,6 +122,9 @@ const Ish = () => {
           noqulay ish sharoitlari uchun qo‘shimcha mehnat ta’tili;<br />,<br />
           oylik maoshi shtat jadvaliga asosan belgilanadi;<br />
           </p>
+          <Link to={'/Apply'}>
+          <button className='bg-[#546bff] text-white py-[6px] px-6 rounded-md mt-2'>Apply</button>
+          </Link>
           
         </div>
       </div>
