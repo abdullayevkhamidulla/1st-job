@@ -126,7 +126,7 @@ const Navbar:React.FC = () => {
             </Link>
           <div className="group inline-block text-[15px] relative">
             <button className="text-white px-4 py-2 rounded-lg hover:bg-blue-600">Metro Haqida</button>
-            <div className="hidden group-hover:block absolute bg-[#2a9b9f] shadow-md py-2 rounded-lg mt-2">
+            <div className="hidden group-hover:block absolute bg-[#2a9b9f] shadow-md py-2 rounded-lg ">
               <Link to={'/Metro-tarixi'}>
                 <button className="block px-4 text-[16px] py-2 bg-[#2a9b9f] hover:bg-blue-600 w-full">Metropoliten Tarixi</button>
               </Link>

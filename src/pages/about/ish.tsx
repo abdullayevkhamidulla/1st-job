@@ -1,10 +1,28 @@
 import React from 'react'
 import Calendar from '../../components/calendar';
 import Search from 'antd/es/input/Search';
-import { Button } from 'antd';
+import { Button, message } from 'antd';
 import { Link } from 'react-router-dom';
+import { applyForVacancy } from '../../services/applyService';
 
-const Ish = () => {
+const Ish: React.FC = () =>  {
+  const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    const vacancyId = parseInt(e.currentTarget.id);
+
+    try {
+      const response = await applyForVacancy(vacancyId);
+
+      if (response.code === 200) {
+        message.success('Application successful');
+      } else {
+        message.error('Application failed');
+      }
+    } catch (error) {
+      console.error('Error applying:', error);
+      message.error('An error occurred. Please try again.');
+    }
+  };
+  
   return (
     <div className='w-[100%] h-auto pt-[100px] pb-10 flex flex-col  items-end dark:bg-[#002D40]'>
     <div id='box77' className='w-[100%] h-[700px] bg-black  bg-cover'>
@@ -20,7 +38,7 @@ const Ish = () => {
           <p className='mt-2 text-[gray]'>lokomotivlar, vagonlar tuzilishi, ishlashi va ularni boshqarish bo‘yicha kasbiy ko‘nikma;</p>
           
         </div>
-        <div className=''>
+        <div  className=''>
           <h1  className='text-[16px] text-[#595959] font-medium mt-7 dark:text-white'>Qo‘shimcha ma’lumotlar:</h1>
           <p className='mt-5 text-[gray]'>ishga qabul qilingach, metropoliten elektropoezdi mashinisti kasbiga qayta tayyorlash maxsus o‘quv kursiga yuboriladi;<br />
           o‘qish davrida stipendiya to‘lab beriladi;<br />
@@ -29,9 +47,15 @@ const Ish = () => {
           mashinistlarga ish kunida tekin nonushta va tushlik beriladi;<br />
           doimiy ravishda tibbiy ko‘rikdan o‘tib borishi ta’minlanadi;<br />
           oylik maoshi shtat jadvaliga asosan belgilanadi;</p>
-          <Link to={'/Apply'}>
-          <button className='bg-[#546bff] text-white py-[6px] px-6 rounded-md mt-2'>Apply</button>
-          </Link>
+          
+        <button
+        id="1"
+        className="bg-[#546bff] text-white py-[6px] px-6 rounded-md mt-2"
+        onClick={handleClick}
+      >
+        Apply
+      </button>
+         
         </div>
       </div>
       <hr />
@@ -44,16 +68,16 @@ const Ish = () => {
           <p className='mt-2 text-[gray]'>kao‘zbek va rus tillarida so‘zlasha olish;</p>
           
         </div>
-        <div className=''>
+        <div  className=''>
           <h1  className='text-[16px] text-[#595959] font-medium mt-7 dark:text-white'>Qo‘shimcha ma’lumotlar:</h1>
           <p className='mt-5 text-[gray] leading-8'>ovqatlanish uchun oylik pullik kompensatsiya to‘lanadi;<br />
           doimiy ravishda tibbiy ko‘rikdan o‘tib borishi ta’minlanadi;<br />
           noqulay ish sharoitlari uchun qo‘shimcha mehnat ta’tili;<br />,<br />
           oylik maoshi shtat jadvaliga asosan belgilanadi;<br />
           </p>
-          <Link to={'/Apply'}>
-          <button className='bg-[#546bff] text-white py-[6px] px-6 rounded-md mt-2'>Apply</button>
-          </Link>
+          
+          <button id='2' className='bg-[#546bff] text-white py-[6px] px-6 rounded-md mt-2'  onClick={handleClick}>Apply</button>
+          
           
         </div>
       </div>
@@ -67,16 +91,16 @@ const Ish = () => {
           
           
         </div>
-        <div className=''>
+        <div  className=''>
           <h1  className='text-[16px] text-[#595959] font-medium mt-7 dark:text-white'>Qo‘shimcha ma’lumotlar:</h1>
           <p className='mt-5 text-[gray] leading-8'>ovqatlanish uchun oylik pullik kompensatsiya to‘lanadi;<br />
           doimiy ravishda tibbiy ko‘rikdan o‘tib borishi ta’minlanadi;<br />
           noqulay ish sharoitlari uchun qo‘shimcha mehnat ta’tili;<br />,<br />
           oylik maoshi shtat jadvaliga asosan belgilanadi;<br />
           </p>
-          <Link to={'/Apply'}>
-          <button className='bg-[#546bff] text-white py-[6px] px-6 rounded-md mt-2'>Apply</button>
-          </Link>
+          
+          <button id='3' className='bg-[#546bff] text-white py-[6px] px-6 rounded-md mt-2'  onClick={handleClick}>Apply</button>
+         
           
         </div>
       </div>
@@ -97,9 +121,9 @@ const Ish = () => {
           noqulay ish sharoitlari uchun qo‘shimcha mehnat ta’tili;<br />,<br />
           oylik maoshi shtat jadvaliga asosan belgilanadi;<br />
           </p>
-          <Link to={'/Apply'}>
-          <button className='bg-[#546bff] text-white py-[6px] px-6 rounded-md mt-2'>Apply</button>
-          </Link>
+         
+          <button id='4' className='bg-[#546bff] text-white py-[6px] px-6 rounded-md mt-2'  onClick={handleClick}>Apply</button>
+          
           
         </div>
       </div>
@@ -122,9 +146,9 @@ const Ish = () => {
           noqulay ish sharoitlari uchun qo‘shimcha mehnat ta’tili;<br />,<br />
           oylik maoshi shtat jadvaliga asosan belgilanadi;<br />
           </p>
-          <Link to={'/Apply'}>
-          <button className='bg-[#546bff] text-white py-[6px] px-6 rounded-md mt-2'>Apply</button>
-          </Link>
+          
+          <button id='5' className='bg-[#546bff] text-white py-[6px] px-6 rounded-md mt-2'  onClick={handleClick}>Apply</button>
+          
           
         </div>
       </div>

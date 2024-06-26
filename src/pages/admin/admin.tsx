@@ -1,29 +1,46 @@
 import React from 'react';
 import Layout from '../../components/Layout';
+import Sidebar from 'components/Sidebar';
+import { Outlet,useNavigate,Link } from 'react-router-dom';
+
 
 const Dashboard: React.FC = () => {
+  const navigate = useNavigate();
+ 
+
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    navigate('/Auth/login');
+  };
+
+
   return (
-    <div>
-
+    <div className="w-[100%] h-screen ">
     
-    <Layout children={undefined}/>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
-        <div className="bg-white p-4 shadow-md rounded">
-          <h2 className="text-xl font-semibold mb-2">Card 1</h2>
-          <p>Content for card 1</p>
-        </div>
-        <div className="bg-white p-4 shadow-md rounded">
-          <h2 className="text-xl font-semibold mb-2">Card 2</h2>
-          <p>Content for card 2</p>
-        </div>
-        <div className="bg-white p-4 shadow-md rounded">
-          <h2 className="text-xl font-semibold mb-2">Card 3</h2>
-          <p>Content for card 3</p>
-        </div>
+    <div className="w-[100%] h-screen flex">
+      <div className="col-auto">
+        <Sidebar />
       </div>
-    
-      </div>
+      <div className='w-[100%] '>
+        
+        <button onClick={handleLogout} className='absolute right-2 top-3 w-[100px] rounded-lg bg-blue-600 px-2 py-2 text-sm tracking-wide text-white hover:bg-blue-700 focus:outline-none'>
+              Logout
+        </button>
+        <Link to={'/home'}>
+        <button  className='absolute right-[150px] top-3 w-[100px] rounded-lg bg-blue-600 px-2 py-2 text-sm tracking-wide text-white hover:bg-blue-700 focus:outline-none'>
+              Home
+        </button>
+        </Link>
+      
 
+       
+        <div className='p-4'>
+        <Outlet />
+        </div>
+        
+      </div>
+    </div>
+  </div>
   );
 };
 

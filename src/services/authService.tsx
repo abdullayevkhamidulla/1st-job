@@ -1,4 +1,5 @@
-import api from './api';
+// auth.ts
+import { post } from './api';
 
 interface RegisterFormData {
   firstName: string;
@@ -11,18 +12,30 @@ interface RegisterFormData {
 
 export const registerUser = async (formData: RegisterFormData): Promise<any> => {
   try {
-    const response = await api.post('/Auth/register', formData);
-    return response.data;
+    const response = await post('/Auth/register', formData);
+    return response;
   } catch (error: any) {
-    throw error.response?.data || 'Registration failed';
+    throw error;
   }
 };
 
 export const loginUser = async (userData: { username: string; password: string }): Promise<any> => {
   try {
-    const response = await api.post('/Auth/login', userData);
-    return response.data;
+    const response = await post('/Auth/login', userData);
+    return response;
   } catch (error: any) {
-    throw error.response?.data || 'Login failed';
+    // console.log('error', error);
+    throw error;
   }
+};
+const saveUserData = (token: string) => {
+  localStorage.setItem('token', token);
+};
+
+export const getUserToken = () => {
+  return localStorage.getItem('token');
+};
+
+export const clearUserData = () => {
+  localStorage.removeItem('token');
 };

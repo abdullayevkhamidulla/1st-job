@@ -16,10 +16,10 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <BrowserRouter>
    <ThemeProvider>
-    <Navbar/>
+    
     
     <Routes/>
-    <Footer/>
+   
   </ThemeProvider>
 
   </BrowserRouter>
