@@ -11,7 +11,7 @@ export const applyForVacancy = async (vacancyId: number): Promise<any> => {
 
   try {
     const response = await axios.post(
-      'https://bf0a-213-230-125-170.ngrok-free.app/api/Apply/apply',
+      'https://a927-213-230-125-170.ngrok-free.app/api/Apply/getApplies',
       { vacancy_id: vacancyId },
       {
         headers: {

@@ -14,6 +14,7 @@ const Ish: React.FC = () =>  {
 
       if (response.code === 200) {
         message.success('Application successful');
+       
       } else {
         message.error('Application failed');
       }

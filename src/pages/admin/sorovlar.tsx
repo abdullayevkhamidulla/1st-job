@@ -1,75 +1,63 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const Sorovlar: React.FC = () => {
-  const [data, setData] = useState<any[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [fetchError, setFetchError] = useState<string | null>(null);
+interface Application {
+  userFirstName: string;
+  userSecondName: string;
+  userLastName: string;
+  phoneNumber: string;
+  vacancyName: string;
+  appliedTime: string;
+  desc: string;
+}
+
+const App: React.FC = () => {
+  const [applications, setApplications] = useState<Application[]>([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      setIsLoading(true);
+    const fetchApplications = async () => {
       try {
-        const response = await axios.get('', {
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        });
-
-        if (response.status === 200 && response.data && response.data.data) {
-          console.log('API response:', response.data);
-          setData(response.data.data);
-        } else {
-          console.error('Unexpected API response:', response);
-          setFetchError('Unexpected API response');
-        }
-      } catch (error: any) {
-        console.error('Error fetching data:', error);
-        setFetchError(error.message);
-      } finally {
-        setIsLoading(false);
+        const response = await axios.get('https://fc45-213-230-125-170.ngrok-free.app/api/Apply/getApplies');
+        setApplications(response.data.data);
+      } catch (error) {
+        console.error('Error fetching data', error);
       }
     };
 
-    fetchData();
+    fetchApplications();
   }, []);
 
   return (
-    <div>
-      {isLoading ? (
-        <p>Loading...</p>
-      ) : fetchError ? (
-        <p>Error: {fetchError}</p>
-      ) : (
-        <table>
-          <thead>
-            <tr>
-              <th>First Name</th>
-              <th>Second Name</th>
-              <th>Last Name</th>
-              <th>Phone Number</th>
-              <th>Vacancy Name</th>
-              <th>Applied Time</th>
-              <th>Description</th>
+    <div className="App">
+      <h1>Applications List</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Second Name</th>
+            <th>Last Name</th>
+            <th>Phone Number</th>
+            <th>Vacancy Name</th>
+            <th>Applied Time</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          {applications.map((app, index) => (
+            <tr key={index}>
+              <td>{app.userFirstName}</td>
+              <td>{app.userSecondName}</td>
+              <td>{app.userLastName}</td>
+              <td>{app.phoneNumber}</td>
+              <td>{app.vacancyName}</td>
+              <td>{new Date(app.appliedTime).toLocaleString()}</td>
+              <td>{app.desc}</td>
             </tr>
-          </thead>
-          <tbody>
-            {data.map((item, index) => (
-              <tr key={index}>
-                <td>{item.userFirstName}</td>
-                <td>{item.userSecondName}</td>
-                <td>{item.userLastName}</td>
-                <td>{item.phoneNumber}</td>
-                <td>{item.vacancyName}</td>
-                <td>{item.appliedTime}</td>
-                <td>{item.desc}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      )}
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
 
-export default Sorovlar;
+export default App;
